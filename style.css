@@ -1,3 +1,4 @@
+/* Common design */
 * {
     margin: 0;
     padding: 0;
@@ -10,11 +11,51 @@
     margin: 0 auto;
 }
 
+.primary-btn {
+    border-radius: 42px;
+    background: rgb(230, 83, 60);
+    padding: 16px 40px 16px 40px;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    border: none;
+}
+
+.secondary-btn {
+    box-sizing: border-box;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 42px;
+    padding: 16px 40px 16px 40px;
+    background: transparent;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+}
+
+.section-title {
+    color: rgb(255, 255, 255);
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 120%;
+    text-align: center;
+}
+
+.section-description {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.3px;
+    text-align: center;
+}
+
+/* Navigation Area */
 header {
     background: #000;
 }
 
-/* Navigation Area */
 nav {
     display: flex;
     justify-content: space-between;
@@ -52,12 +93,12 @@ nav {
 }
 
 .nav-links ul li a:hover {
-    border-radius: 46px;
+    border-radius: 39px;
     background: rgb(230, 83, 60);
 }
 
 .active {
-    border-radius: 46px;
+    border-radius: 39px;
     background: rgb(230, 83, 60);
 }
 
@@ -74,30 +115,129 @@ nav {
     display: flex;
     padding-top: 6rem;
     gap: 200px;
+    align-items: center;
 }
 
 .hero-container .left-side h1 {
     color: rgb(255, 255, 255);
-    font-size: 78px;
+    font-size: 5rem;
     font-weight: 900;
     line-height: 120%;
 }
 
 .hero-container .left-side p {
     color: rgba(255, 255, 255, 0.5);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0.5px;
     margin-top: 20px;
     margin-bottom: 30px;
 }
-.hero-container .left-side h1 .italic-text{
+
+.hero-container .left-side h1 .italic-text {
     font-style: italic;
     font-weight: 300;
 }
 
+/* habits are */
+.habits {
+    background: #000;
+    padding-top: 100px;
+}
 
+.habit-container {
+    display: flex;
+    gap: 20px;
+}
+
+.habit {
+    margin-top: 50px;
+}
+
+.habit img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.habit h4 {
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.habit p {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.3px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* run and extra area */
+.card {
+    background: #000;
+    padding: 100px;
+}
+
+.card-container {
+    border-radius: 18px;
+    background: rgb(34, 34, 34);
+    display: flex;
+    padding: 40px;
+    align-items: center;
+    gap: 100px;
+}
+
+.card-container .card-left-side h2 {
+    color: rgb(255, 255, 255);
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 120%;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.card-container .card-left-side p {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.3px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.card-right-side img {
+    width: 100%;
+    border-radius: 18px;
+}
+/* BM calculator area */
+.bm-cal {
+    padding: 100px;
+}
+
+.bm-cal h2 {
+    color: rgb(255, 255, 255);
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 120%;
+}
+
+.bm-cal p {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.3px;
+    margin-top: 10px;
+}
 
 /* Responsive for small device */
 @media screen and (max-width: 576px) {
@@ -109,5 +249,17 @@ nav {
         display: block;
         font-size: 24px;
         color: #fff;
+    }
+
+    .hero-container {
+        flex-direction: column;
+    }
+
+    .habit-container {
+        flex-direction: column;
+    }
+
+    .card-container {
+        flex-direction: column;
     }
 }
