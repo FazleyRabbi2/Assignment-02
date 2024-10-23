@@ -460,6 +460,9 @@ form select {
 
 /* Responsive for small device */
 @media screen and (max-width: 576px) {
+    .container{
+        padding: 20px;
+    }
     .nav-links ul {
         display: none;
     }
